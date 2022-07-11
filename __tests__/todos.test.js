@@ -10,12 +10,12 @@ const mockUser = {
   email: 'test@example.com',
   password: '123456',
 };
-const mockUser2 = {
-  firstName: 'Test',
-  lastName: 'User 2',
-  email: 'test2@example.com',
-  password: '123456',
-};
+// const mockUser2 = {
+//   firstName: 'Test',
+//   lastName: 'User 2',
+//   email: 'test2@example.com',
+//   password: '123456',
+// };
 
 const registerAndLogin = async (userProps = {}) => {
   const password = userProps.password ?? mockUser.password;
