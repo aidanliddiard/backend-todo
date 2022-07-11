@@ -47,6 +47,11 @@ describe('user backend routes', () => {
       iat: expect.any(Number),
     });
   });
+  it('DELETE /sessions deletes the user session', async () => {
+    const [agent] = await registerAndLogin();
+    const resp = await agent.delete('/api/v1/users/sessions');
+    expect(resp.status).toBe(204);
+  });
   afterAll(() => {
     pool.end();
   });
